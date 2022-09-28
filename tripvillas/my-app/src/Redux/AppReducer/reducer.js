@@ -1,9 +1,12 @@
-const reducer =(state,action)=>{
+const initialstate={
+
+}
+const reducer =(state=initialstate,action)=>{
   switch(action.type){
     // create your own case:
       
       default:
-        state
+       return state
   }
 
 }

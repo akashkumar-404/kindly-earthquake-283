@@ -1,0 +1,53 @@
+.About-Question{
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.provides-image{
+    height: 80px;
+    width: 40px;
+    margin: auto;
+}
+.Provides-box{
+text-align: center;
+}
+.Provides-box-text-l{
+    font-weight: 600;
+}
+.Provides-box-text-s{
+    color: gray;
+    font-size: 13px;
+}
+
+.QandA-image{
+    height: 80px;
+    width: 40px;
+    margin: auto;
+}
+.QandA-box{
+text-align: center;
+padding-left: 10px;
+padding-right: 10px;
+}
+.QandA-box-text-l{
+    font-weight: 700;
+}
+.QandA-box-text-s{
+    color: gray;
+    font-size: 15px;
+}
+
+.ExploreBtn{
+   background-color: #ED8936;
+   border-radius: 5px;
+   color: white;
+   width: 80%;
+}
+.ExploreBtn:hover{
+    border-radius: 10px;
+}
+.Box-ExploreBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
