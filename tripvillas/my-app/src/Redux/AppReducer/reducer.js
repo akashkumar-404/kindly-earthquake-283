@@ -1,7 +1,11 @@
 const initialstate={
 
 }
+// <<<<<<< day-2_fp03_063
+const reducer =(state=initialstate,action)=>{
+// =======
 export const reducer =(state=initialstate,action)=>{
+// >>>>>>> main
   switch(action.type){
     // create your own case:
       
