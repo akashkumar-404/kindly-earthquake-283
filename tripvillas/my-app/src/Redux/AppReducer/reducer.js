@@ -1,12 +1,35 @@
-const initialstate={
+import { GET_DATA_fw19_0144_FAILURE, GET_DATA_fw19_0144_REQUEST, GET_DATA_fw19_0144_SUCCESS } from "./actionType"
 
+const initialstate={
+    hotels_fw19_0144:[],
+    isLoading:false,
+    isError:false,
 }
+
+
 export const reducer =(state=initialstate,action)=>{
-  switch(action.type){
+const{type,payload}=action
+console.log(payload)
+  switch(type){
     // create your own case:
-      
-      default:
-       return state
+      case GET_DATA_fw19_0144_REQUEST:
+        return{
+        ...state,
+        isLoading:true
+      }
+      case GET_DATA_fw19_0144_SUCCESS: console.log(payload)
+        return {
+        ...state,
+        hotels_fw19_0144:payload,
+        isLoading:false,
+        isError:false
+      }
+      case GET_DATA_fw19_0144_FAILURE:return{
+        ...state,
+        isError:true
+      }
+    default:
+       return state;
   }
 }
 
