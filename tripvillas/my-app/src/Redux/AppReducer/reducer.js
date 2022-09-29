@@ -5,12 +5,19 @@ const initialstate={
     isLoading:false,
     isError:false,
 }
+// // <<<<<<< fw19_0144_day1
 
 
+
+// =======
+// <<<<<<< day-2_fp03_063
+const reducer =(state=initialstate,action)=>{
+// =======
 export const reducer =(state=initialstate,action)=>{
+// >>>>>>> main
 const{type,payload}=action
-console.log(payload)
   switch(type){
+ // >>>>>>> main
     // create your own case:
       case GET_DATA_fw19_0144_REQUEST:
         return{
