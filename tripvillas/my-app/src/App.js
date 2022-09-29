@@ -1,5 +1,6 @@
 // <<<<<<< fw19_0144_day1
-import Navbar from "./fw19_0144/components/navbar";
+//import Navbar from "./fw19_0144/components/navbar";
+//import Hotel_list_fw19_0144 from "./fw19_0144/pages/hotels";
 
 // =======
 // <<<<<<< day1_fw18_0504
@@ -15,17 +16,18 @@ function App() {
 
   return (
     <div className="App">
-// <<<<<<< fw19_0144_day1
-   //  <Navbar />
+{/* // <<<<<<< fw19_0144_day1 */}
+   {/* //  <Navbar />
 // =======
-// <<<<<<< day1_fw18_0504
+// <<<<<<< day1_fw18_0504 */}
       <Navbar />
       <HomePage />
       <Footer />
-// =======
-      <Managed/>
-// >>>>>>> main
-// >>>>>>> main
+{/* // ======= */}
+      {/* <Managed/> */}
+{/* // >>>>>>> main
+// >>>>>>> main */}
+{/* <Hotel_list_fw19_0144 /> */}
     </div>
   );
 }
