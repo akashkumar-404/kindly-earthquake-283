@@ -1,0 +1,7 @@
+.footerLink{
+     color: #555;
+     font-size: 12px;
+}
+.footerLink:hover{
+     color: black;
+}

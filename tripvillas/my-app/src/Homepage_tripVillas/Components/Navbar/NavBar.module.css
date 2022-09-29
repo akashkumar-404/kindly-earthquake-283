@@ -1,0 +1,35 @@
+.navContainer {
+  background-color: #333;
+  padding: 12px 24px;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.Logo{
+     width: 150px;
+}
+
+.linkText {
+     color: lightgray;
+     font-size: 14px;
+}
+.linkText:hover{
+     color:white;
+}
+.userIcon{
+     background-color: transparent !important;
+     
+}
+.userIcon:hover{
+     background-color: transparent;
+}
+.hamburgerIcon{
+     /* display: flex !important; */
+
+     align-items: center;
+}
+
+.currMenuBtn{
+     background-color: transparent !important;
+     color: white;
+}
