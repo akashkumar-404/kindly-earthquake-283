@@ -1,12 +1,12 @@
 // <<<<<<< fw19_0144_day1
-//import Navbar from "./fw19_0144/components/navbar";
-//import Hotel_list_fw19_0144 from "./fw19_0144/pages/hotels";
+import Navbar from "./fw19_0144/components/navbar";
+import Hotel_list_fw19_0144 from "./fw19_0144/pages/hotels";
 
 // =======
 // <<<<<<< day1_fw18_0504
-import Footer from "./Homepage_tripVillas/Components/Footer/Footer";
-import Navbar from "./Homepage_tripVillas/Components/Navbar/Navbar";
-import HomePage from "./Homepage_tripVillas/HomePage";
+// import Footer from "./Homepage_tripVillas/Components/Footer/Footer";
+// import Navbar from "./Homepage_tripVillas/Components/Navbar/Navbar";
+// import HomePage from "./Homepage_tripVillas/HomePage";
 // =======
 import Managed from "./Tripvillas_Managed/Pages/Managed";
 // >>>>>>> main
@@ -20,14 +20,14 @@ function App() {
    {/* //  <Navbar />
 // =======
 // <<<<<<< day1_fw18_0504 */}
-      <Navbar />
+      {/* <Navbar />
       <HomePage />
-      <Footer />
+      <Footer /> */}
 {/* // ======= */}
       {/* <Managed/> */}
 {/* // >>>>>>> main
 // >>>>>>> main */}
-{/* <Hotel_list_fw19_0144 /> */}
+<Hotel_list_fw19_0144 />
     </div>
   );
 }
