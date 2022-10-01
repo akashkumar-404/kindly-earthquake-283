@@ -1,0 +1,72 @@
+.homeBannar {
+  width: 100% !important;
+  height: 600px !important;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/Pimal2-1.2d5d237dbd32.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.bannarContent {
+  width: 60%;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.bannerText {
+  font-size: 32px;
+}
+.bannerFormBox {
+  display: flex !important;
+  padding: 12px 24px;
+  background-color: white;
+  border-radius: 5px;
+  gap: 2px;
+}
+.bannerInputLocation {
+  width: 700px !important;
+  border: 1px solid gray;
+}
+.bannerInputDate {
+  background-color: white;
+  border: 1px solid gray;
+
+  color: #333;
+
+  width: 500px;
+}
+.bannerInput {
+  background-color: white;
+  color: #333;
+  width: 300px;
+  padding: 12px 24px;
+  border: 1px solid gray;
+
+}
+
+.bannerBtn {
+  width: 500px !important;
+  background-color: #1E87F0;
+  color: #333;
+  border: none;
+  padding: 0 12px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 990px) {
+  .bannerFormBox {
+     background-color: white !important;
+     width: 500px !important;
+    flex-direction: column !important;
+    gap: 4px;
+    padding: 24px;
+  }
+  .bannerInput{
+     width: 100% !important;
+     border: 1px solid gray;
+
+  }
+}

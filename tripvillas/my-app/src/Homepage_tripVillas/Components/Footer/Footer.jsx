@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem, Text } from "@chakra-ui/react";
+import { Box, Grid, GridItem, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
 import style from "./footer.module.css";
@@ -29,10 +29,10 @@ const Footer = () => {
 
   return (
     <Box padding={"24px 12px"}>
-      <Grid templateColumns={"repeat(6, 1fr)"}  gap="8px">
+      <SimpleGrid columns={[2,3,4,6]} justifyContent="center"  gap="8px">
         {FooterLinks.map((link) => {
           return (
-            <GridItem key={link[0]}>
+            <Box key={link[0]}>
               <Link to={"/home"}></Link>
               <Link
                 className={style.footerLink}
@@ -41,10 +41,10 @@ const Footer = () => {
                 <Text>{link[0]}</Text>
                 <Text>{link[1]}</Text>
               </Link>
-            </GridItem>
+            </Box>
           );
         })}
-      </Grid>
+      </SimpleGrid>
     </Box>
   );
 };
