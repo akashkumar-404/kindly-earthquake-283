@@ -28,7 +28,7 @@ const Footer = () => {
   ];
 
   return (
-    <Box padding={"24px 12px"}>
+    <Box borderTop={"1px solid lightgray"} padding={"24px 12px"}>
       <SimpleGrid columns={[2,3,4,6]} justifyContent="center"  gap="8px">
         {FooterLinks.map((link) => {
           return (

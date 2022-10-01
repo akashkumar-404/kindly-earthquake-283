@@ -19,6 +19,7 @@ const Banner = () => {
           />
           <input
             type="date"
+            placeholder=""
             className={style.bannerInputDate + " " + style.bannerInput}
           />
           <input
