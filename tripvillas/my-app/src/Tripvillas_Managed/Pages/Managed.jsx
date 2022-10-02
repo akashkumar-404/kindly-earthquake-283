@@ -9,7 +9,11 @@ import SingleTataRioDeGoa from "./SinglePage-4";
 import SingleKenishaHolidayHomes from "./SinglePage-3"
 import SingleWhiteVillasSahapur from  "./SinglePage-2"
 import SingleWhiteVillasKasara from "./SinglePage"
-import CheckNav from "../Components/Checkout-Navbar";
+import FooterBlack from "../Components/BlackFooter";
+import CheckoutsKasara from "./CheckOutsKasara";
+import CheckoutsSahapur from "./CheckoutsSahapur";
+import CheckoutsKeisha from "./CheckoutsKenisha";
+import CheckoutsTataRio from "./CheckoutsTataRio";
 
 
 export default function Managed(){
@@ -21,7 +25,6 @@ export default function Managed(){
   console.log(data)
     return(
         <>
-        <CheckNav/>
         <About/>
         <Provides/>
         <QandA/>
@@ -30,14 +33,19 @@ export default function Managed(){
            return <CurrOpp key={item.id} data={item}/>
          })
         }  
-        <br />
+        {/* <br />
         <SingleTataRioDeGoa/>   
         <br/>
         <SingleKenishaHolidayHomes/> 
         <br />
         <SingleWhiteVillasSahapur/>
-        <br />
-        <SingleWhiteVillasKasara/>  
+        <br /> 
+        <SingleWhiteVillasKasara/>  */}
+        <FooterBlack/>
+        {/* <CheckoutsKasara/>
+        <CheckoutsSahapur/>
+        <CheckoutsKeisha/>
+        <CheckoutsTataRio/> */}
         </>
     )
 }

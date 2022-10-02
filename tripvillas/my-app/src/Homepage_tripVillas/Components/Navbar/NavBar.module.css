@@ -1,35 +1,37 @@
 .navContainer {
-  background-color: #333;
+  background-color: #333 !important;
   padding: 12px 24px;
   justify-content: space-between;
+  width: 100% !important;
   align-items: center;
   color: white;
+  position: sticky !important;
+  top: 0;
+  z-index: 100;
 }
-.Logo{
-     width: 150px;
+.Logo {
+  width: 150px;
 }
 
 .linkText {
-     color: lightgray;
-     font-size: 14px;
+  color: lightgray;
+  font-size: 14px;
 }
-.linkText:hover{
-     color:white;
+.linkText:hover {
+  color: white;
 }
-.userIcon{
-     background-color: transparent !important;
-     
+.userIcon {
+  background-color: transparent !important;
 }
-.userIcon:hover{
-     background-color: transparent;
-}
-.hamburgerIcon{
-     /* display: flex !important; */
+/* .userIcon:hover {
+  background-color: transparent;
+} */
+.hamburgerIcon {
 
-     align-items: center;
+  align-items: center;
 }
 
-.currMenuBtn{
-     background-color: transparent !important;
-     color: white;
+.currMenuBtn {
+  background-color: transparent !important;
+  color: white;
 }

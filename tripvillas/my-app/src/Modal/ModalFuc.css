@@ -1,0 +1,166 @@
+/* .maindiv{
+    width: 600px;
+    height: auto;
+    border: 1px solid red;
+} */
+.modalDiv{
+    /* display: flex; */
+    width: 600px;
+    height: auto;
+    /* border: 1px solid black; */
+}
+.modalInnerDiv{
+    display: flex;
+    /* border: 1px solid red; */
+    margin-top: 25px;
+    height: 100px;
+}
+.selectDiv{
+    position: fixed;
+    /* border: 1px solid yellowgreen; */
+    height: 40px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.selectStyle{
+    -webkit-appearance: none;
+    padding-right: 20px;
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    height: 40px;
+    vertical-align: middle;
+    display: inline-block;
+    max-width: 100%;
+    width: 100%;
+    transition: .2s ease-in-out;
+    background: #fff;
+    color: #666;
+    border: 1px solid #e5e5e5;
+    text-transform: none;
+    box-sizing: border-box;
+    margin: 0;
+    border-radius: 0;
+    font: inherit;
+    overflow: visible !important;
+    width: 100%;
+    border: 0 none;
+    padding: 0 10px;
+    line-height: 13px;
+}
+.digitInput{
+    height: 40px;
+    vertical-align: middle;
+    display: inline-block;
+    padding: 0 10px;
+    background: #fff;
+    color: #666;
+    border: 1px solid #e5e5e5;
+    transition: .2s ease-in-out;
+    box-sizing: border-box;
+    margin: 0;
+    border-radius: 0;
+    font: inherit;
+    letter-spacing: normal;
+    word-spacing: normal;
+    width: 450px;
+    background-repeat: no-repeat;
+}
+.inputDiv{
+    margin-left: 135px;
+    /* border: 1px solid black; */
+}
+.signInWithEmail{
+    color: #1e87f0;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: ProximaNova,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+}
+.signInWithEmail:hover{
+    text-decoration: underline;
+}
+.buttonStyles{
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #e5e5e5;
+    overflow: visible;
+    font: inherit;
+    margin: 0;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 30px;
+    vertical-align: middle;
+    font-size: .875rem;
+    line-height: 38px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: .1s ease-in-out;
+    cursor: pointer;
+}
+.verifySubmit{
+    background-color: #0f7ae5;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    margin: 0;
+    overflow: visible;
+    font: inherit;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 30px;
+    vertical-align: middle;
+    font-size: .875rem;
+    line-height: 38px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: .1s ease-in-out;
+    margin-left: 3px;
+}
+.buttonDiv{
+    width: 295px;
+    height: 42px;
+    /* border: 1px solid green; */
+    margin-top: 20px;
+    margin-left: 320px;
+}
+.onlyDigits{
+    font-size: 0.8em;
+    color: #888888;
+    margin-top: 0;
+}
+.signInSignUpHead{
+    font-weight: 300;
+    color: #000000;
+    font-family: ProximaNovaLight,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+.emailMainDiv{
+    width: 600px;
+    /* border: 1px solid black; */
+    height: 350px;
+}
+.headingDiv{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    margin-top: 5px;
+}
+.firstname{
+    height: 40px;
+    vertical-align: middle;
+    display: inline-block;
+    padding: 0 10px;
+    background: #fff;
+    color: #666;
+    border: 1px solid #e5e5e5;
+    transition: .2s ease-in-out;
+    box-sizing: border-box;
+    margin: 0;
+    border-radius: 0;
+    font: inherit;
+    letter-spacing: normal;
+    word-spacing: normal;
+}

@@ -50,7 +50,7 @@ const CurrencyComponent = () => {
           className={style.currMenuBtn}
           color={"White"}
           as={Button}
-          rightIcon={<ChevronDownIcon />}
+          rightIcon={<ChevronDownIcon/>}
         >
           {currency}
         </MenuButton>
