@@ -20,22 +20,34 @@
   font-size: 32px;
 }
 .bannerFormBox {
-     width: auto;
+  width: auto;
   display: flex !important;
   padding: 12px 24px;
   background-color: white;
   border-radius: 5px;
   gap: 2px;
 }
-
 .bannerInputLocation {
-  width: 700px !important;
   border: 1px solid gray;
+}
+.searchResultBox{
+  position: absolute;
+  /* bottom: ; */
+  width: 100% !important;
+  border: 1px solid !important;
+  color: black;
+  background-color: white;
+}
+.searchDataResText{
+  border-bottom: 1px solid lightgray;
+  padding: 12px 14px;
+}
+.searchDataResText:hover{
+  background-color: lightgray;
 }
 .bannerInputDate {
   background-color: white;
   border: 1px solid gray;
-
   color: #333;
 
   width: 500px;

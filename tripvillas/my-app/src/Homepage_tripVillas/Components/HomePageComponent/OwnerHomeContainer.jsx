@@ -1,12 +1,17 @@
 import { Box, Button, Flex, Image, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Card from "../Card";
 
 const OwnerHomeContainer = () => {
+  const navigate = useNavigate();
+  const handleRedirect = () => {
+    return navigate("/tripvillas-managed");
+  };
   return (
     <div>
       <Card width="auto">
-        <Text fontSize={"24px"}>Holiday Home Investment Opportunities</Text>
+        <Text fontSize={"24px"}>Are You A Holiday Home Owner/Manager?</Text>
         <SimpleGrid
           padding={"24px 0"}
           alignItems="center"
@@ -75,7 +80,7 @@ const OwnerHomeContainer = () => {
           </Flex>
         </SimpleGrid>
         <Flex justifyContent={"center"} margin="34px 0">
-          <Button colorScheme={"blue"}>LIST YOUR PROPERTY</Button>
+          <Button onClick={()=>handleRedirect()} colorScheme={"blue"}>LIST YOUR PROPERTY</Button>
         </Flex>
       </Card>
     </div>

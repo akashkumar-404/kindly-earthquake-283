@@ -46,7 +46,7 @@ const VacationIdeas = () => {
         };
      useEffect(()=>{
           axios.get("https://shrouded-tor-13668.herokuapp.com/vacationIdeas").then(res=>setData(res.data)).catch(e=>console.log(e));
-     })
+     },[])
   return (
      <Box width="100%" margin={"64px 0"}>
       <Text fontSize={"24px"} margin="24px 0" marginLeft="54px" color="gray">

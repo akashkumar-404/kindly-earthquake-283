@@ -7,9 +7,9 @@ import './ModalFuc.css';
 import SignInWithEmail from './SignInWithEmail';
 import SignUp from './SignUp';
 
-const ModalFuc = () => {
+const ModalFuc = ({isOpen,setOpen}) => {
 
-    const [open, setOpen] = useState(false);
+    // const [open, setOpen] = useState(isOpen);
     const modalRef = useRef(null);
     const [selectedOption, setSelectedOption] = useState(null);
     const [openSecond, setOpenSecond] = useState(false);
@@ -19,14 +19,14 @@ const ModalFuc = () => {
 
     const toggleValue = () => {
         let value = toggle;
+        console.log(value);
         let value2 = signUpSignIn;
         if (value === "Sign In" && value2 === "Sign Up Instead") {
             setToggle("Sign Up");
             setsignUpSignIn("Sign In Instead");
             if (value === "Sign In" && value2 === "Sign Up Instead") {
-                setSignUp(true);
+                setSignUp(!signUp);
                 setOpen(false);
-                // console.log("inside Sign Up");
             }
         }
         else {
@@ -66,12 +66,9 @@ const ModalFuc = () => {
     ];
     return (
         <div className='maindiv'>
-            <button className="button" onClick={() => setOpen(true)}>
-                Open modal
-            </button>
             <Modal
                 ref={modalRef}
-                open={open}
+                open={isOpen}
                 onClose={() => setOpen(false)}
                 initialFocusRef={modalRef}
             >
@@ -119,7 +116,7 @@ const ModalFuc = () => {
                 onClose={() => setSignUp(false)}
                 initialFocusRef={modalRef}
             >
-                <SignUp props={!signUp} />
+                <SignUp props={signUp} />
             </Modal>
         </div>
     )

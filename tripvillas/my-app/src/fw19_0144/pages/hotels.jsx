@@ -113,7 +113,7 @@ dispatch(GetData_fw19_0144(data))
                 <Grid templateColumns='repeat(3, 1fr)' gap='15px' >
                     {
                         hotels&&hotels.map((item)=>
-                        <Link to={`hotels/${item.id}`}>   <div key={item.id} >
+                        <Link to={`/hotel/${item.id}`}>    <div key={item.id} >
                             <div className={styles.foo} style={{height:'220px',width:'320px'}}>
                             <Img src={item.img}  />
                             <div className={styles.hidden}>
