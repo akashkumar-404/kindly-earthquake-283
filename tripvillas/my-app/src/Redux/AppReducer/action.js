@@ -17,3 +17,13 @@ export const GetData_fw19_0144=(params)=>(dispatch)=>{
         )
     })
 }
+
+export const GetData_fp03_063 =()=>(dispatch)=>{
+dispatch({type:types.GET_DATA_fp03_063_REQUEST})
+return axios.get("https://shrouded-tor-13668.herokuapp.com/bodySection").then((res)=>{
+     dispatch({type:types.GET_DATA_fp03_063_SUCCESS,payload:res.data})
+})
+.catch((err)=>{
+    dispatch({type:types.GET_DATA_fp03_063_FAILURE})
+})
+}

@@ -51,3 +51,8 @@ padding-right: 10px;
     justify-content: center;
     align-items: center;
 }
+
+.Banner-box{
+    text-align: center;
+    color: white;
+}

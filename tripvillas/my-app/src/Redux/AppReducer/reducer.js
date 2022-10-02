@@ -1,4 +1,4 @@
-import { GET_DATA_fw19_0144_FAILURE, GET_DATA_fw19_0144_REQUEST, GET_DATA_fw19_0144_SUCCESS } from "./actionType"
+import { GET_DATA_fp03_063_FAILURE, GET_DATA_fp03_063_REQUEST, GET_DATA_fp03_063_SUCCESS, GET_DATA_fw19_0144_FAILURE, GET_DATA_fw19_0144_REQUEST, GET_DATA_fw19_0144_SUCCESS } from "./actionType"
 
 const initialstate={
     hotels_fw19_0144:[],
@@ -7,11 +7,8 @@ const initialstate={
 }
 // // <<<<<<< fw19_0144_day1
 
-
-
 // =======
 // <<<<<<< day-2_fp03_063
-// const reducer =(state=initialstate,action)=>{
 // =======
 export const reducer =(state=initialstate,action)=>{
 // >>>>>>> main
@@ -35,6 +32,29 @@ const{type,payload}=action
         ...state,
         isError:true
       }
+
+      case GET_DATA_fp03_063_REQUEST:
+      return{
+           ...state,
+           isLoading:true,
+           isError:false
+      }
+
+      case GET_DATA_fp03_063_SUCCESS:
+        return{
+          ...state,
+          isLoading:false,
+          hotels_fw19_0144:payload,
+          isError:false
+        }
+
+        case GET_DATA_fp03_063_FAILURE:
+          return{
+            ...state,
+            isLoading:false,
+            hotels_fw19_0144:[],
+            isError:true
+          }
     default:
        return state;
   }
