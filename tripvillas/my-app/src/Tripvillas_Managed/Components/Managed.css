@@ -46,6 +46,15 @@ padding-right: 10px;
 .ExploreBtn:hover{
     border-radius: 10px;
 }
+
+.ExploreBtns{
+ background-color: #C53030;   
+ border-radius: 5px;
+}
+.ExploreBtns:hover{
+    border-radius: 10px;
+}
+
 .Box-ExploreBtn{
     display: flex;
     justify-content: center;

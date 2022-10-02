@@ -1,29 +1,28 @@
-//<<<<<<< day3_fw17_1095
+
 // import Footer from "./Homepage_tripVillas/Components/Footer/Footer";
 // import Navbar from "./Homepage_tripVillas/Components/Navbar/Navbar";
 // import HomePage from "./Homepage_tripVillas/HomePage";
-import ModalFuc from "./Modal/ModalFuc"
-//=======
-// <<<<<<< fw19_0144_day1
-// <<<<<<< HEAD
+// import ModalFuc from "./Modal/ModalFuc"
+
 // import Navbar from "./fw19_0144/components/navbar";
-// import Hotel_list_fw19_0144 from "./fw19_0144/pages/hotels";
-//=======
-//<<<<<<< fw19_0144_day2
+import Hotel_list_fw19_0144 from "./fw19_0144/pages/hotels";
+
 //import Navbar from "./fw19_0144/components/navbar";
 //import Hotel_list_fw19_0144 from "./fw19_0144/pages/hotels";
-//=======
-// import Navbar from "./fw19_0144/components/navbar";
-//>>>>>>> main
-//>>>>>>> 719ee7264b09297a7ca505f1119e4ce9636ba6f0
 
-// =======
-// <<<<<<< day1_fw18_0504
+// import Navbar from "./fw19_0144/components/navbar";
+
 import Footer from "./Homepage_tripVillas/Components/Footer/Footer";
 import Navbar from "./Homepage_tripVillas/Components/Navbar/Navbar";
 import HomePage from "./Homepage_tripVillas/HomePage";
+import MainRoutes from "./Routes/MainRoutes";
+
+// import Footer from "./Homepage_tripVillas/Components/Footer/Footer";
+// import Navbar from "./Homepage_tripVillas/Components/Navbar/Navbar";
+// import HomePage from "./Homepage_tripVillas/HomePage";
+// >>>>>>> 1cc173d737f386edd9d59fdb8f343357420506a4
 // =======
-// import Managed from "./Tripvillas_Managed/Pages/Managed";
+import Managed from "./Tripvillas_Managed/Pages/Managed";
 // >>>>>>> main
 // >>>>>>> main
 //>>>>>>> main
@@ -32,13 +31,13 @@ function App() {
 
   return (
     <div className="App">
-//<<<<<<< day3_fw17_1095
+{/* //<<<<<<< day3_fw17_1095 */}
       {/* <Navbar />
       <HomePage />
       <Footer /> */}
-      <h1>Modal Functioning</h1>
-      <ModalFuc />
-//=======
+      {/* <h1>Modal Functioning</h1> */}
+      {/* <ModalFuc /> */}
+{/* //======= */}
 {/* // <<<<<<< fw19_0144_day1 */}
 {/* // <<<<<<< fw19_0144_day2 */}
    {/* //  <Navbar />
@@ -52,12 +51,17 @@ function App() {
 {/* // ======= */}
 {/* // <<<<<<< day1_fw18_0504 */}
 {/* //>>>>>>> main */}
-      <Navbar />
+      {/* <Navbar /> */}
 {/* >>>>>>> 719ee7264b09297a7ca505f1119e4ce9636ba6f0 */}
-      <HomePage />
-      <Footer /> 
+{/* <<<<<<< HEAD */}
+      {/* <HomePage />
+      <Footer />  */}
 {/* // ======= */}
-      {/* <Managed/> */}
+      {/* <HomePage /> */}
+      {/* <Footer />  */}
+{/* >>>>>>> 1cc173d737f386edd9d59fdb8f343357420506a4 */}
+{/* // ======= */}
+      <Managed/>
 {/* //<<<<<<< fw19_0144_day2 */}
 {/* // >>>>>>> main
 // >>>>>>> main */}
@@ -65,12 +69,13 @@ function App() {
 {/* <Hotel_list_fw19_0144 /> */}
 {/* ======= */}
 {/* <Hotel_list_fw19_0144 /> */}
+<MainRoutes />
 {/* //======= */}
 {/* // >>>>>>> main */}
 {/* // >>>>>>> main */}
 {/* //>>>>>>> main
 //>>>>>>> 719ee7264b09297a7ca505f1119e4ce9636ba6f0 */}
-//>>>>>>> main
+{/* //>>>>>>> main */}
     </div>
   );
 }

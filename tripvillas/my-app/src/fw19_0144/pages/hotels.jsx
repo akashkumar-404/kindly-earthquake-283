@@ -1,10 +1,13 @@
-import { Box, Button, Grid, GridItem, Img, Select, Text } from '@chakra-ui/react'
+import { Box, Button, Grid, Img, Input, Select, Text } from '@chakra-ui/react'
 import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { GetData_fw19_0144 } from '../../Redux/AppReducer/action'
 import Navbar from '../components/navbar'
 import styles from './hotels.module.css'
+import { useState } from 'react'
 const Hotel_list_fw19_0144 = () => {
+    const [select,setSelect]=useState([])
     const hotels=useSelector(state=>state.AppReducer.hotels_fw19_0144)
     const dispatch=useDispatch()
     console.log(hotels)
@@ -14,6 +17,27 @@ const Hotel_list_fw19_0144 = () => {
   })
  },[])
   
+ const selectvalue=()=>{
+    const data={
+        params:{
+            country:select,
+            
+        }
+    }
+dispatch(GetData_fw19_0144(data))
+ }
+    
+ const handleCheckBox=(e)=>{
+    const newCategory=[...select]
+    if(newCategory.includes(e.target.value)){
+      newCategory.splice(newCategory.indexOf(e.target.value),1)
+    
+    }
+    else{
+      newCategory.push(e.target.value)
+    }
+    setSelect(newCategory)
+  }
   return (
     <div>
         <Navbar />
@@ -42,7 +66,7 @@ const Hotel_list_fw19_0144 = () => {
             <br></br>
             <div style={{display:'flex',justifyContent:"space-between"}}>
                 <div >
-                    <Select name="country" >
+                    <Select name="country"  onChange={handleCheckBox}>
                              <option value="all">All Countries</option>
                              <option value="bangladesh">Bangladesh</option>
                              <option value="croatia">Croatia</option>
@@ -53,7 +77,7 @@ const Hotel_list_fw19_0144 = () => {
                     </Select>
                 </div>
                 <div>
-                    <Select name='property' border='1px solid'>
+                    <Select name='property' border='1px solid'  onChange={handleCheckBox}>
                             <option value='all'>All Property Types</option>
                             <option value='apartment'>Apartment</option>
                             <option value='farm'>Farm</option>
@@ -67,38 +91,40 @@ const Hotel_list_fw19_0144 = () => {
                     </Select>
                 </div>
                 <div>
-                <Select name="sale" >
-                             <option value="all">All Sale Types</option>
+                <Select name="sale"  onChange={handleCheckBox}>
+                             <option value="All Sale Types">All Sale Types</option>
                              <option value="primary">Primary (From Builder)</option>
-                             <option value="resale">Resale</option>
+                             <option value="Resale">Resale</option>
                     </Select>
                 </div>
                 <div>
-                <Select name="management" >
+                <Select name="management" onChange={handleCheckBox}>
                              <option value="all">All Management</option>
                              <option value="self">Self Managed</option>
                              <option value="professionally">Professionally Managed</option>
                     </Select>
                 </div>
                 <div> 
-                    <Button>
-                        Submit
-                    </Button>
+                    <Button type="submit" value="submit" onClick={()=>selectvalue()}>SUBMIT</Button>
                  </div>
             </div>
-            <div style={{margin:'auto',border:'1px solid'}} >
+            <div style={{margin:'auto'}} >
             <br></br>
-                <Grid templateColumns='repeat(3, 1fr)' gap='145px' >
+                <Grid templateColumns='repeat(3, 1fr)' gap='15px' >
                     {
                         hotels&&hotels.map((item)=>
-                        <div key={item.id}>
-                            <div className={styles.foo} style={{border:'1px solid' }} _hover=''>
-                            <Img src={item.img}  width='240px'  />
+                        <Link to={`hotels/${item.id}`}>   <div key={item.id} >
+                            <div className={styles.foo} style={{height:'220px',width:'320px'}}>
+                            <Img src={item.img}  />
+                            <div className={styles.hidden}>
+                             <Button >Details</Button>
+                            </div>
                             </div>
                             <Text fontSize='20px' fontWeight='400'>{item.name}</Text>
                             <Text fontSize='13px'>{item.location}</Text>
                             <Text fontSize='10px'>{item.price}</Text>
-                        </div>
+                            
+                        </div></Link>
                         )
                     }
                 </Grid>
