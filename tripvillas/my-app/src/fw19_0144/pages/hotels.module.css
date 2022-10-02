@@ -5,8 +5,38 @@
     filter: brightness(150%);
    
 }
+.foo{
+    overflow: hidden;
+    
+}
 .foo:hover Img{
     filter: brightness(100%);
     transform: scale(1.5);
-    overflow: hidden;
+   background-color: aqua;
+}
+.hidden Button{
+    background-color: aqua;
+}
+.hidden Button:hover{
+    background-color: aqua;
+    
+}
+
+.foo:hover .hidden{
+    display:block;
+    position: relative;
+    left:100px;
+    bottom: 90px;
+    
+}
+.foo Img:hover{
+    -webkit-filter: grayscale(100%) blur(2px);
+  filter: grayscale(70%) ;
+  transition: transform 5s, filter 3s ease-in-out;
+  
+}
+
+.hidden{
+    display:none;
+   
 }
