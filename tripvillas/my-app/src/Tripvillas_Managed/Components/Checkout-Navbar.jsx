@@ -1,8 +1,10 @@
 import { Box, Button, Flex, Image } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 export default function CheckNav() {
+  const navigate=useNavigate()
   const HandleCheck = () => {
-    //  link to payment page
+    return navigate('/payment')
   };
   return (
     <Flex

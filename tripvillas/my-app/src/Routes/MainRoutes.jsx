@@ -12,6 +12,7 @@ import SingleTataRioDeGoa from "../Tripvillas_Managed/Pages/SinglePage-4";
 import SingleWhiteVillasSahapur from "../Tripvillas_Managed/Pages/SinglePage-2"
 import SingleWhiteVillasKasara from "../Tripvillas_Managed/Pages/SinglePage"
 import Hotel_list_fw19_0144 from "../fw19_0144/pages/hotels";
+import Form from '../fw19_0144/components/Form'
 
 const MainRoutes = () => {
   let location = useLocation()
@@ -52,6 +53,7 @@ const MainRoutes = () => {
       <Route path="/checkout-sahapur" element={<CheckoutsSahapur />} />
       <Route path="/checkout-kenisha" element={<CheckoutsKeisha />} />
       <Route path="/checkout-tatario" element={<CheckoutsTataRio />} />
+      <Route path='/payment' element={<Form />} />
     </Routes>
   );
 };

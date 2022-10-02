@@ -65,12 +65,13 @@ const ModalFuc = ({isOpen,setOpen}) => {
         { value: '51', label: '+51' },
     ];
     return (
-        <div className='maindiv'>
+        <div className='maindiv' >
             <Modal
                 ref={modalRef}
                 open={isOpen}
                 onClose={() => setOpen(false)}
                 initialFocusRef={modalRef}
+               
             >
                 <div className='headingDiv'>
                     <h2 className='signInSignUpHead'>{toggle}</h2>
