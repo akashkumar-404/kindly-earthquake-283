@@ -4,6 +4,7 @@ import * as types from "./actionType"
 import axios from "axios"
 
 export const GetData_fw19_0144=(params)=>(dispatch)=>{
+    console.log("string",params)
     dispatch ({type:types.GET_DATA_fw19_0144_REQUEST})
     return axios.get(`https://serene-sands-22517.herokuapp.com/hotels`,params).then((res)=>{
         console.log(res)
