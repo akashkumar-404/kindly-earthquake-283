@@ -80,7 +80,7 @@ const Banner = () => {
             })}
           </select>
           <button onClick={()=>{handleRedirect()}} className={style.bannerBtn + " " + style.bannerInput}>
-            CHECKOUT
+            SEARCH
           </button>
         </Box>
       </Box>
