@@ -1,20 +1,11 @@
 import { Box, Button, Divider, Image, SimpleGrid, Text } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 export default function CurrOpp({data}){
-    
+    // console.log(`/tripvillas-managed/${data.id}`);
+    let navigate = useNavigate();
     const handleExplore=(id)=>{
-      if(id==1)
-      {
-          // <Single_Tata_Rio_De_Goa/> 
-      }
-      if(id==2){
-        //<Single_Kenisha_Holiday_Homes/> 
-      }
-      if(id==3){
-        //<Single_White_Villas_Sahapur/>
-      }
-      if(id==4){
-        //<Single_White_Villas_Kasara/>
-      }
+        console.log(id);
+        return navigate(`/tripvillas-managed/${id}`)
     }
     return(
         <>

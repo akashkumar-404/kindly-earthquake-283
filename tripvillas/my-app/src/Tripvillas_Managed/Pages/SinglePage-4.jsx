@@ -4,13 +4,18 @@ import Tata_Rio_Photos from "../Components/Photos-4";
 import SingleAbout_1 from "../Components/SinglePage-About";
 import Type_4 from "../Components/Type-4";
 import { Box, Button, Flex, Image } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 
 export default function SingleTataRioDeGoa(){
+    let navigate = useNavigate();
 
-    const handleCheckout=()=>{
-               console.log("checkout tatario")
-    }
+  const handleCheckout=()=>{
+    return navigate("/checkout-tatario");
+   
+  }
+
+  
     return(
         <>
         <Flex maxW={"100%"} height={{base:"40px", md:"50px",lg:"60px"}} alignItems="center"justifyContent={"space-between"} >

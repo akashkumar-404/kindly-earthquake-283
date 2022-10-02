@@ -9,7 +9,7 @@
   position: relative;
 }
 .bannarContent {
-  width: 60%;
+  width: 80%;
   color: white;
   position: absolute;
   left: 50%;
@@ -20,6 +20,7 @@
   font-size: 32px;
 }
 .bannerFormBox {
+  width: auto;
   display: flex !important;
   padding: 12px 24px;
   background-color: white;
@@ -27,13 +28,26 @@
   gap: 2px;
 }
 .bannerInputLocation {
-  width: 700px !important;
   border: 1px solid gray;
+}
+.searchResultBox{
+  position: absolute;
+  /* bottom: ; */
+  width: 100% !important;
+  border: 1px solid !important;
+  color: black;
+  background-color: white;
+}
+.searchDataResText{
+  border-bottom: 1px solid lightgray;
+  padding: 12px 14px;
+}
+.searchDataResText:hover{
+  background-color: lightgray;
 }
 .bannerInputDate {
   background-color: white;
   border: 1px solid gray;
-
   color: #333;
 
   width: 500px;
@@ -44,7 +58,6 @@
   width: 300px;
   padding: 12px 24px;
   border: 1px solid gray;
-
 }
 
 .bannerBtn {
@@ -57,9 +70,13 @@
 }
 
 @media screen and (max-width: 990px) {
+     .bannarContent{
+          width: 100% !important;
+     }
   .bannerFormBox {
      background-color: white !important;
-     width: 500px !important;
+     width: 80% !important;
+     margin: auto;
     flex-direction: column !important;
     gap: 4px;
     padding: 24px;
@@ -67,6 +84,25 @@
   .bannerInput{
      width: 100% !important;
      border: 1px solid gray;
-
   }
+}
+
+
+/* TOP VACATIONS */
+
+.slideBox{
+     /* width: 200px; */
+     height: 200px;
+     position: relative;
+}
+.slideText{
+     position: absolute;
+     top: 0%;
+     background-color: rgba(0, 0, 0, 0.6);
+     color: white;
+     text-align: center;
+     padding-top:25% ;
+     width: 100% !important;
+     height:200px !important;
+     
 }

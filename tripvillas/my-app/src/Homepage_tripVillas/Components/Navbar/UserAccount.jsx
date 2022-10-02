@@ -6,10 +6,12 @@ import {
   MenuItem,
   MenuList,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import style from "./NavBar.module.css";
+import ModalFun from "../../../Modal/ModalFuc";
 const UserAccount = () => {
+  const [open, setOpen] = useState(false);
   return (
     <>
       <Menu>
@@ -22,7 +24,12 @@ const UserAccount = () => {
           />
         </MenuButton>
         <MenuList color={"#333"}>
-          <Link to={"/signin"}>
+          <ModalFun isOpen={open} setOpen={setOpen} />
+          <Link
+            onClick={() => {
+              setOpen(true);
+            }}
+          >
             <MenuItem>Sign In</MenuItem>
           </Link>
           <Link to={"/signup"}>

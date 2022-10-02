@@ -5,10 +5,18 @@ import Photos_1 from "../Components/Photos-1";
 import SingleAbout_1 from "../Components/SinglePage-About";
 import Type_1 from "../Components/Type-1";
 import { Box, Button, Flex, Image } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 export default function SingleWhiteVillasKasara(){
+  let navigate = useNavigate();
+
   const handleCheckout=()=>{
-    console.log("Kasara")
+    return navigate("/checkout-kasara");
+
+    navigate("/checkout-tatario");
+    navigate("/checkout-sahapur");
+
+    navigate("/checkout-kenisha")
   }
 return (
    <>

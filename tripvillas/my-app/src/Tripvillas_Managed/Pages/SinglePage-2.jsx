@@ -4,12 +4,16 @@ import Sahapur_Photos from "../Components/Photos-2";
 import SingleAbout_1 from "../Components/SinglePage-About";
 import Type_2 from "../Components/Type-2";
 import { Box, Button, Flex, Image } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 
 export default function SingleWhiteVillasSahapur(){
+    let navigate = useNavigate();
+
     const handleCheckout=()=>{
-        console.log("Sahapur")
-      }
+     return  navigate("/checkout-sahapur");
+  
+    }
     return(
         <>
          <Flex maxW={"100%"} height={{base:"40px", md:"50px",lg:"60px"}} alignItems="center"justifyContent={"space-between"} >

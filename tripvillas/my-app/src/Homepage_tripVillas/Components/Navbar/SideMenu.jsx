@@ -60,7 +60,7 @@ export const HamBurgerMenu = () => {
               <Heading paddingBottom={"12px"} size={"xs"}>
                 HOLIDAY HOMES FOR SALE
               </Heading>
-              <Link onClick={() => onClose()} className={style.linkText} to="/">
+              <Link onClick={() => onClose()} className={style.linkText} to="/tripvillas-managed">
                 Tripvillas Managed
                 <br />
                 Homes from A grade developers. Rentals guaranteed

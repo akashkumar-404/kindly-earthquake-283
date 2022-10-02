@@ -1,68 +1,69 @@
-import { GET_DATA_fp03_063_FAILURE, GET_DATA_fp03_063_REQUEST, GET_DATA_fp03_063_SUCCESS, GET_DATA_fw19_0144_FAILURE, GET_DATA_fw19_0144_REQUEST, GET_DATA_fw19_0144_SUCCESS } from "./actionType"
+import {
+  GET_DATA_fp03_063_FAILURE,
+  GET_DATA_fp03_063_REQUEST,
+  GET_DATA_fp03_063_SUCCESS,
+  GET_DATA_fw19_0144_FAILURE,
+  GET_DATA_fw19_0144_REQUEST,
+  GET_DATA_fw19_0144_SUCCESS,
+} from "./actionType";
 
-const initialstate={
-    hotels_fw19_0144:[],
-    isLoading:false,
-    isError:false,
-}
-// // <<<<<<< fw19_0144_day1
+const initialstate = {
+  hotels_fw19_0144: [],
+  isLoading: false,
+  isError: false,
+};
 
-// =======
-// <<<<<<< day-2_fp03_063
-// =======
-export const reducer =(state=initialstate,action)=>{
-// >>>>>>> main
-const{type,payload}=action
-  switch(type){
- // >>>>>>> main
-    // create your own case:
-      case GET_DATA_fw19_0144_REQUEST:
-        return{
+export const reducer = (state = initialstate, action) => {
+  const { type, payload } = action;
+  switch (type) {
+    case GET_DATA_fw19_0144_REQUEST:
+      return {
         ...state,
-        isLoading:true
-      }
-      case GET_DATA_fw19_0144_SUCCESS: console.log(payload)
-        return {
+        isLoading: true,
+      };
+    case GET_DATA_fw19_0144_SUCCESS:
+      console.log(payload);
+      return {
         ...state,
-        hotels_fw19_0144:payload,
-        isLoading:false,
-        isError:false
-      }
-      case GET_DATA_fw19_0144_FAILURE:return{
+        hotels_fw19_0144: payload,
+        isLoading: false,
+        isError: false,
+      };
+    case GET_DATA_fw19_0144_FAILURE:
+      return {
         ...state,
-        isError:true
-      }
+        isError: true,
+      };
 
-      case GET_DATA_fp03_063_REQUEST:
-      return{
-           ...state,
-           isLoading:true,
-           isError:false
-      }
+    case GET_DATA_fp03_063_REQUEST:
+      return {
+        ...state,
+        isLoading: true,
+        isError: false,
+      };
 
-      case GET_DATA_fp03_063_SUCCESS:
-        return{
-          ...state,
-          isLoading:false,
-          hotels_fw19_0144:payload,
-          isError:false
-        }
+    case GET_DATA_fp03_063_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        hotels_fw19_0144: payload,
+        isError: false,
+      };
 
-        case GET_DATA_fp03_063_FAILURE:
-          return{
-            ...state,
-            isLoading:false,
-            hotels_fw19_0144:[],
-            isError:true
-          }
+    case GET_DATA_fp03_063_FAILURE:
+      return {
+        ...state,
+        isLoading: false,
+        hotels_fw19_0144: [],
+        isError: true,
+      };
     default:
-       return state;
+      return state;
   }
-}
+};
 
-
-// before pushing the code to repo 
- // first we need to make pull request and then push code to repo
- // 1. using `git pull origin main`
-  // 2. `git checkout <branch name>` and then
- // using `git push origin <branch name>`
+// before pushing the code to repo
+// first we need to make pull request and then push code to repo
+// 1. using `git pull origin main`
+// 2. `git checkout <branch name>` and then
+// using `git push origin <branch name>`

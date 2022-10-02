@@ -1,7 +1,35 @@
 import { Box, Button, Flex, Input, Select, Text } from "@chakra-ui/react";
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import style from "./homepage.module.css";
 const Banner = () => {
+  const [locationText, setLocationText] = useState("");
+  const [searchData, setSearchData] = useState([]);
+  let timer;
+  const handleLocationInputChange = (e)=>{
+    setLocationText(e.target.value);
+    if(timer){
+      clearTimeout(timer);
+      console.log("time cleared")
+    }
+    if(e.target.value){
+      timer = setTimeout(()=>{
+        axios.get(`https://serene-sands-22517.herokuapp.com/hotels?location_like=${e.target.value}`).then(item=>setSearchData(item.data)).catch(e=>console.log(e))
+      },800);
+    }else{
+      setSearchData([]);
+    }
+  }
+
+  const handleSelectLocation = (text)=>{
+    setLocationText(text);
+    setSearchData([]);
+  }
+  const navigate = useNavigate();
+  const handleRedirect=()=>{
+    return navigate("/hotels");
+  }
   return (
     <Box w={[480, 767, 991, 1440]} className={style.homeBannar}>
       <Box className={style.bannarContent}>
@@ -12,13 +40,27 @@ const Banner = () => {
           Top Holiday Homes - Villas, Apartments & Homestays
         </Text>
         <Box className={style.bannerFormBox}>
-          <input
-            type={"text"}
-            className={style.bannerInput + " " + style.bannerInputLocation}
-            placeholder="Location"
-          />
+          <Box className={style.inputLocationFlex} position="relative">
+            <input
+              type={"text"}
+              value={locationText}
+              onChange={(e)=>handleLocationInputChange(e)}
+              className={style.bannerInput + " " + style.bannerInputLocation}
+              placeholder="Location"
+            />
+            {locationText &&searchData.length>0 && (
+              <Box color="black" maxHeight={"200px"}  overflowY="scroll" className={style.searchResultBox}>
+                {
+                  searchData.map(data=>{
+                    return <Text onClick={()=>handleSelectLocation(data.location)} padding={"12px 14px"} className={style.searchDataResText} borderBottom={"1px solid"} key={data.id}>{data.location}</Text>
+                  })
+                }
+              </Box>
+            )}
+          </Box>
           <input
             type="date"
+            placeholder=""
             className={style.bannerInputDate + " " + style.bannerInput}
           />
           <input
@@ -37,7 +79,7 @@ const Banner = () => {
               );
             })}
           </select>
-          <button className={style.bannerBtn + " " + style.bannerInput}>
+          <button onClick={()=>{handleRedirect()}} className={style.bannerBtn + " " + style.bannerInput}>
             CHECKOUT
           </button>
         </Box>
