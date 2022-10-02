@@ -148,3 +148,19 @@
     /* border: 1px solid red; */
     margin-top: 5px;
 }
+.firstname{
+    height: 40px;
+    vertical-align: middle;
+    display: inline-block;
+    padding: 0 10px;
+    background: #fff;
+    color: #666;
+    border: 1px solid #e5e5e5;
+    transition: .2s ease-in-out;
+    box-sizing: border-box;
+    margin: 0;
+    border-radius: 0;
+    font: inherit;
+    letter-spacing: normal;
+    word-spacing: normal;
+}

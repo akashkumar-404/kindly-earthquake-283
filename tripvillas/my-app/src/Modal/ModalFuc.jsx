@@ -5,6 +5,7 @@ import 'react-responsive-modal/styles.css';
 import Select from 'react-select';
 import './ModalFuc.css';
 import SignInWithEmail from './SignInWithEmail';
+import SignUp from './SignUp';
 
 const ModalFuc = () => {
 
@@ -14,6 +15,7 @@ const ModalFuc = () => {
     const [openSecond, setOpenSecond] = useState(false);
     const [toggle, setToggle] = useState("Sign In");
     const [signUpSignIn, setsignUpSignIn] = useState("Sign Up Instead");
+    const [signUp, setSignUp] = useState(false);
 
     const toggleValue = () => {
         let value = toggle;
@@ -21,6 +23,11 @@ const ModalFuc = () => {
         if (value === "Sign In" && value2 === "Sign Up Instead") {
             setToggle("Sign Up");
             setsignUpSignIn("Sign In Instead");
+            if (value === "Sign In" && value2 === "Sign Up Instead") {
+                setSignUp(true);
+                setOpen(false);
+                // console.log("inside Sign Up");
+            }
         }
         else {
             setToggle("Sign In");
@@ -104,7 +111,15 @@ const ModalFuc = () => {
                 onClose={() => setOpenSecond(false)}
                 initialFocusRef={modalRef}
             >
-                <SignInWithEmail  />
+                <SignInWithEmail />
+            </Modal>
+            <Modal
+                ref={modalRef}
+                open={signUp}
+                onClose={() => setSignUp(false)}
+                initialFocusRef={modalRef}
+            >
+                <SignUp props={!signUp} />
             </Modal>
         </div>
     )
